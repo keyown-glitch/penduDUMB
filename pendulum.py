@@ -26,6 +26,8 @@ fig, ax = plt.subplots()
 ball, = ax.plot(L*np.sin(-angle), L-L*np.cos(-angle), marker = "o", markersize = "9")
 rope, = ax.plot(L*np.sin(angle), np.cos(angle)*L+1)
 def line(o):
+    #first brackets is te x valus
+    #te secon bracket es y and y = mx + b wher m = cos/sin an b = L
     return np.array([[xmax*np.sin(-o*np.pi/(2*angle)), xmax*np.sin(o*np.pi/(2*angle))], (-ymax*(np.cos(o*np.pi/angle))-1)*np.array([xmax*np.sin(-o*np.pi/(2*angle)), xmax*np.sin(o*np.pi/(2*angle))])/(xmax*np.sin(-o*np.pi/(2*angle)))+L])
    # return np.array([[xmax*np.sin(-o*np.pi/(2*angle))], [((ymax*np.cos(o*np.pi/angle) - 1)*xmax*np.sin(-o*np.pi/(2*angle))/(xmax * np.sin(-o * np.pi /(2 * angle)))) + L]])
     #return np.array([[-1, -0.5, 0], [0.5, 0.5, 0.5]])
