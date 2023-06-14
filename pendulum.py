@@ -41,7 +41,7 @@ def update(o):
     x, y = cycle(o)
     x2, y2 = line(o)
     ball.set_data([x], [y])
-    rope.set_data([x2], [y2])
+    rope.set_data([0, x], [1, y])
     return ball, rope,
 
 
